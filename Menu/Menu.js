@@ -39,39 +39,67 @@ let menuItems = [
   
 */
 
-// function createMenu(array) {
+function createMenu(array) {
 
-//   const menu = document.createElement('div');
-//   const studentList = document.createElement('ul');
-//   const facultyList = document.createElement('ul');
-//   const newList = document.createElement('ul');
-//   const techList = document.createElement('ul');
-//   const musicList = document.createElement('ul');
-//   const logList =document.createElement('ul');
+  const menu = document.createElement('div');
+  const studentList = document.createElement('ul');
+  const facultyList = document.createElement('ul');
+  const newList = document.createElement('ul');
+  const techList = document.createElement('ul');
+  const musicList = document.createElement('ul');
+  const logList =document.createElement('ul');
 
-// menu.append(studentList);
-// menu.append(facultyList);
-// menu.append(newList);
-// menu.append(techList);
-// menu.append(musicList);
-// menu.append(logList);
-
-
-// studentList.classList.add('menu');
-// facultyList.classList.add('menu');
-// newList.classList.add('menu');
-// techList.classList.add('menu');
-// musicList.classList.add('menu');
-// logList.classList.add('menu');
+menu.append(studentList);
+menu.append(facultyList);
+menu.append(newList);
+menu.append(techList);
+menu.append(musicList);
+menu.append(logList);
 
 
-// studentList.textContent = 'Students';   //or put param in?//
-// facultyList.textContent = 'Faculty';
-// newList.textContent = 'Whats New';
-// techList.textContent = 'Tech Trends';
-// musicList.textContent = 'Music';
-// logList.textContent = 'Log Out';
+studentList.classList.add('menu');
+facultyList.classList.add('menu');
+newList.classList.add('menu');
+techList.classList.add('menu');
+musicList.classList.add('menu');
+logList.classList.add('menu');
+
+menu.textContent = 'HERE';
+studentList.textContent = menuItems[0];
+facultyList.textContent = menuItems[1];
+newList.textContent = menuItems[2];
+techList.textContent = menuItems[3];
+musicList.textContent = menuItems[4];
+logList.textContent = menuItems[5];
 
 
 
+// const menuButton = document.querySelector('.menu-button');
+// console.log(menuButton);
+
+// menuButton.addEventListener('click', (event) => {
+
+//   menu.classList.toggle('menu--open');
+
+// });
+
+
+return menu;
+
+}
+ 
 // }
+//  const header =document.querySelector('.header');
+//  menuItems.forEach(element => {
+//    header.append(createMenu (element));
+
+
+//  });
+
+
+//  menuItems.forEach((menu => {
+//    header.append(createMenu(menu[0], menu[1], menu[2], menu[3], menu[4]))
+
+//  }));
+
+
