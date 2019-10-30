@@ -143,6 +143,9 @@ expandButton.classList.add('expandButton');
 
 
 
-
+return article;
 
 }
+
+const mainArticle = document.querySelector('.articles');
+console.log(mainArticle);
