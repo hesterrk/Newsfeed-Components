@@ -158,6 +158,7 @@ expandButton.addEventListener('click', event => {
   //toggling article open//
   mainArticle.classList.toggle('article-open');
 
+//or should mainArticle just be: 'article' instead?
 
 });
 
@@ -174,3 +175,11 @@ mainArticle.append(createArticle('Testing Article Title', 'Test1', 'Test2', 'Tes
 
 
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+
+data.forEach(article => {
+  console.log('creating article component', article.title);
+  mainArticle.append(createArticle(article.title, article.date, article.content1, article.content2, article.content3));
+
+
+
+});
