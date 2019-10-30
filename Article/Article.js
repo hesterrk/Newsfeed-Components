@@ -118,7 +118,7 @@ function createArticle(title, date, content1, content2, content3) {
 
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
-  const date = document.createElement('p');
+  const articleDate = document.createElement('p');
   const paraOne = document.createElement('p');
   const paraTwo = document.createElement('p');;
   const paraThree = document.createElement('p');
@@ -126,7 +126,7 @@ function createArticle(title, date, content1, content2, content3) {
   
   article.append(articleTitle);
   article.append(expandButton);
-  article.append(date);
+  article.append(articleDate);
   article.append(paraOne);
   article.append(paraTwo);
   article.append(paraThree);
@@ -135,8 +135,9 @@ function createArticle(title, date, content1, content2, content3) {
 //add class names to ones with classes
 
 article.classList.add('article');
-date.classList.add('date');
+articleDate.classList.add('date');
 expandButton.classList.add('expandButton');
+
 
 
 
