@@ -151,12 +151,15 @@ paraThree.textContent = content3;
 expandButton.textContent = 'Click!'
 
 
-
-
 // add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
+expandButton.addEventListener('click', event => {
+  console.log('Article button test when we click', event.target);
+  //toggling article open//
+  mainArticle.classList.toggle('article-open');
 
 
+});
 
 
 return mainArticle;
@@ -168,3 +171,6 @@ console.log(mainArticle);
 
 mainArticle.append(createArticle('Testing Article Title', 'Test1', 'Test2', 'Test3', 'Test4'))
 
+
+
+// Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
