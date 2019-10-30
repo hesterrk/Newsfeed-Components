@@ -116,7 +116,7 @@ const data = [
 
 
 
-function createArticle(title, date, content1, content2, content3) {
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
@@ -145,39 +145,39 @@ expandButton.classList.add('expandButton');
 
 articleTitle.textContent = title;
 articleDate.textContent = date;
-paraOne.textContent = content1;
-paraTwo.textContent = content2;
-paraThree.textContent = content3;
-expandButton.textContent = 'Click!'
+paraOne.textContent = firstParagraph;
+paraTwo.textContent = secondParagraph;
+paraThree.textContent = thirdParagraph;
+expandButton.textContent = 'Click!';
 
 
 // add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
-expandButton.addEventListener('click', event => {
+expandButton.addEventListener('click', (event) => {
   console.log('Article button test when we click', event.target);
   //toggling article open//
-  mainArticle.classList.toggle('article-open');
+  article.classList.toggle('article-open');
 
 //or should mainArticle just be: 'article' instead?
 
 });
 
 
-return mainArticle;
+return article;
 
 }
 
 const mainArticle = document.querySelector('.articles');
 console.log(mainArticle);
 
-mainArticle.append(createArticle('this is title', 'this is date', 'this is content1', 'this is content2', 'this is content3'))
+mainArticle.append(createArticle('title', 'date', 'paragraphOne', 'paragraphTwo', 'paragraphThree'))
 
 
 
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 data.forEach(mainArticle => {
-  mainArticle.append(createArticle(article.title, article.date, article.content1, article.content2, article.content3));
+  mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
 
 
 
@@ -185,3 +185,9 @@ data.forEach(mainArticle => {
 
 // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
+// let firstButton = buttonCreator('Button 1');
+
+// let secondButton = buttonCreator('Button 2');
+
+// parent.appendChild(firstButton);
+// parent.appendChild(secondButton);
