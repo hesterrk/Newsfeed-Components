@@ -115,7 +115,6 @@ const data = [
 */
 
 
-
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 
   const article = document.createElement('div');
@@ -173,11 +172,16 @@ console.log(mainArticle);
 mainArticle.append(createArticle('title', 'date', 'paragraphOne', 'paragraphTwo', 'paragraphThree'))
 
 
-
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
-data.forEach(mainArticle => {
-  mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
+data.forEach((text) => {
+  let newText = createArticle(text);
+
+  // mainArticle.appendChild(newText);
+
+  mainArticle.append(createArticle(newText.title, newText.date, newText.firstParagraph, newText.secondParagraph, newText.thirdParagraph))
+
+  // mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
 
 
 
