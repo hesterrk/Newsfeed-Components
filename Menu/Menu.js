@@ -19,8 +19,12 @@ let menuItems = [
     </ul>
   </div>
 
-  The function takes an array as its only argument.
+      
+  
+  //<div class="header"> is parent?//
+     
 
+  The function takes an array as its only argument.
 
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
@@ -35,3 +39,39 @@ let menuItems = [
   
 */
 
+// function createMenu(array) {
+
+//   const menu = document.createElement('div');
+//   const studentList = document.createElement('ul');
+//   const facultyList = document.createElement('ul');
+//   const newList = document.createElement('ul');
+//   const techList = document.createElement('ul');
+//   const musicList = document.createElement('ul');
+//   const logList =document.createElement('ul');
+
+// menu.append(studentList);
+// menu.append(facultyList);
+// menu.append(newList);
+// menu.append(techList);
+// menu.append(musicList);
+// menu.append(logList);
+
+
+// studentList.classList.add('menu');
+// facultyList.classList.add('menu');
+// newList.classList.add('menu');
+// techList.classList.add('menu');
+// musicList.classList.add('menu');
+// logList.classList.add('menu');
+
+
+// studentList.textContent = 'Students';   //or put param in?//
+// facultyList.textContent = 'Faculty';
+// newList.textContent = 'Whats New';
+// techList.textContent = 'Tech Trends';
+// musicList.textContent = 'Music';
+// logList.textContent = 'Log Out';
+
+
+
+// }

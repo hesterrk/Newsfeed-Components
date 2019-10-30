@@ -152,6 +152,8 @@ expandButton.textContent = 'Click!';
 
 // add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
+
+
 expandButton.addEventListener('click', (event) => {
   console.log('Article button test when we click', event.target);
   //toggling article open//
@@ -192,7 +194,6 @@ data.forEach((text) => {
  let newTitle = document.createElement('h2');
  let newDate = document.createElement('p');
  let newPara = document.createElement('p');
-
 
 
 // let secondButton = buttonCreator('Button 2');
