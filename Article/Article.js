@@ -90,7 +90,6 @@ const data = [
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
-//parent class- look at html file//
 
   <div class="article">
     <h2>{title of the article}</h2>
@@ -126,7 +125,22 @@ function createArticle(title, date, content1, content2, content3) {
   const expandButton= document.createElement('span');
   
   article.append(articleTitle);
-  
+  article.append(expandButton);
+  article.append(date);
+  article.append(paraOne);
+  article.append(paraTwo);
+  article.append(paraThree);
+  article.append(expandButton);
+
+//add class names to ones with classes
+
+article.classList.add('article');
+date.classList.add('date');
+expandButton.classList.add('expandButton');
+
+
+
+
 
 
 
