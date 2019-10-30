@@ -114,6 +114,8 @@ const data = [
 
 */
 
+
+
 function createArticle(title, date, content1, content2, content3) {
 
   const article = document.createElement('div');
@@ -139,13 +141,30 @@ articleDate.classList.add('date');
 expandButton.classList.add('expandButton');
 
 
+//adding content 
+
+articleTitle.textContent = title;
+articleDate.textContent = date;
+paraOne.textContent = content1;
+paraTwo.textContent = content2;
+paraThree.textContent = content3;
+expandButton.textContent = 'Click!'
 
 
 
 
-return article;
+// add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
+
+
+
+
+return mainArticle;
 
 }
 
 const mainArticle = document.querySelector('.articles');
 console.log(mainArticle);
+
+mainArticle.append(createArticle('Testing Article Title', 'Test1', 'Test2', 'Test3', 'Test4'))
+
