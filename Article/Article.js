@@ -175,11 +175,11 @@ mainArticle.append(createArticle('title', 'date', 'paragraphOne', 'paragraphTwo'
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 data.forEach((text) => {
-  let newText = createArticle(text);
+  let article = createArticle(text);
 
   // mainArticle.appendChild(newText);
 
-  mainArticle.append(createArticle(newText.title, newText.date, newText.firstParagraph, newText.secondParagraph, newText.thirdParagraph))
+  mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph))
 
   // mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
 
@@ -189,7 +189,11 @@ data.forEach((text) => {
 
 // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
-// let firstButton = buttonCreator('Button 1');
+ let newTitle = document.createElement('h2');
+ let newDate = document.createElement('p');
+ let newPara = document.createElement('p');
+
+
 
 // let secondButton = buttonCreator('Button 2');
 
