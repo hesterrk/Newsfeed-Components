@@ -170,16 +170,18 @@ return mainArticle;
 const mainArticle = document.querySelector('.articles');
 console.log(mainArticle);
 
-mainArticle.append(createArticle('Testing Article Title', 'Test1', 'Test2', 'Test3', 'Test4'))
+mainArticle.append(createArticle('this is title', 'this is date', 'this is content1', 'this is content2', 'this is content3'))
 
 
 
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
-data.forEach(article => {
-  console.log('creating article component', article.title);
+data.forEach(mainArticle => {
   mainArticle.append(createArticle(article.title, article.date, article.content1, article.content2, article.content3));
 
 
 
 });
+
+// Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+
