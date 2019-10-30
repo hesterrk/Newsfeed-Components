@@ -179,7 +179,7 @@ data.forEach((text) => {
 
   // mainArticle.appendChild(newText);
 
-  mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph))
+  mainArticle.append(createArticle(text.title, text.date, text.firstParagraph, text.secondParagraph, text.thirdParagraph))
 
   // mainArticle.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
 
