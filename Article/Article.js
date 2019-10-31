@@ -167,7 +167,8 @@ return article;
 const mainArticle = document.querySelector('.articles');
 console.log(mainArticle);
 
-mainArticle.append(createArticle('title', 'date', 'paragraphOne', 'paragraphTwo', 'paragraphThree'))
+//Testing our first panel
+// mainArticle.append(createArticle('title', 'date', 'paragraphOne', 'paragraphTwo', 'paragraphThree'))
 
 
 // Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
