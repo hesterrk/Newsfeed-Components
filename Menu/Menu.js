@@ -20,8 +20,6 @@ let menuItems = [
   </div>
 
       
-  
-  //<div class="header"> is parent?//
      
 
   The function takes an array as its only argument.
@@ -39,32 +37,31 @@ let menuItems = [
   
 */
 
-function createMenu(array) {
+function createMenu() {
 
+  const header = document.querySelector('.header')
   const menu = document.createElement('div');
-  const studentList = document.createElement('ul');
-  const facultyList = document.createElement('ul');
-  const newList = document.createElement('ul');
-  const techList = document.createElement('ul');
-  const musicList = document.createElement('ul');
-  const logList =document.createElement('ul');
+  const list = document.createElement('ul');
+  const studentList = document.createElement('li');
+  const facultyList = document.createElement('li');
+  const newList = document.createElement('li');
+  const techList = document.createElement('li');
+  const musicList = document.createElement('li');
+  const logList = document.createElement('li');
 
-menu.append(studentList);
-menu.append(facultyList);
-menu.append(newList);
-menu.append(techList);
-menu.append(musicList);
-menu.append(logList);
+menu.appendChild(list)
+list.appendChild(studentList)
+list.appendChild(facultyList)
+list.appendChild(newList)
+list.appendChild(techList)
+list.appendChild(musicList)
+list.appendChild(logList)
+header.appendChild(menu)
 
 
-studentList.classList.add('menu');
-facultyList.classList.add('menu');
-newList.classList.add('menu');
-techList.classList.add('menu');
-musicList.classList.add('menu');
-logList.classList.add('menu');
+menu.classList.add('menu');
 
-menu.textContent = 'HERE';
+
 studentList.textContent = menuItems[0];
 facultyList.textContent = menuItems[1];
 newList.textContent = menuItems[2];
@@ -74,32 +71,23 @@ logList.textContent = menuItems[5];
 
 
 
-// const menuButton = document.querySelector('.menu-button');
-// console.log(menuButton);
-
-// menuButton.addEventListener('click', (event) => {
-
-//   menu.classList.toggle('menu--open');
-
-// });
-
-
 return menu;
 
 }
- 
-// }
-//  const header =document.querySelector('.header');
-//  menuItems.forEach(element => {
-//    header.append(createMenu (element));
 
 
-//  });
+const menu = createMenu()
+const menuButton = document.querySelector('.header');
+
+console.log(menu)
+console.log(menuButton);
+
+menuButton.addEventListener('click', _ => {
+
+  menu.classList.toggle('menu--open');
+
+});
 
 
-//  menuItems.forEach((menu => {
-//    header.append(createMenu(menu[0], menu[1], menu[2], menu[3], menu[4]))
-
-//  }));
 
 
