@@ -19,6 +19,9 @@ let menuItems = [
     </ul>
   </div>
 
+      
+     
+
   The function takes an array as its only argument.
 
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
@@ -33,3 +36,58 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+function createMenu() {
+
+  const header = document.querySelector('.header')
+  const menu = document.createElement('div');
+  const list = document.createElement('ul');
+  const studentList = document.createElement('li');
+  const facultyList = document.createElement('li');
+  const newList = document.createElement('li');
+  const techList = document.createElement('li');
+  const musicList = document.createElement('li');
+  const logList = document.createElement('li');
+
+menu.appendChild(list)
+list.appendChild(studentList)
+list.appendChild(facultyList)
+list.appendChild(newList)
+list.appendChild(techList)
+list.appendChild(musicList)
+list.appendChild(logList)
+header.appendChild(menu)
+
+
+menu.classList.add('menu');
+
+
+studentList.textContent = menuItems[0];
+facultyList.textContent = menuItems[1];
+newList.textContent = menuItems[2];
+techList.textContent = menuItems[3];
+musicList.textContent = menuItems[4];
+logList.textContent = menuItems[5];
+
+
+
+return menu;
+
+}
+
+
+const menu = createMenu()
+const menuButton = document.querySelector('.header');
+
+console.log(menu)
+console.log(menuButton);
+
+menuButton.addEventListener('click', _ => {
+
+  menu.classList.toggle('menu--open');
+
+});
+
+
+
+
