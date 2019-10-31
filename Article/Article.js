@@ -152,14 +152,10 @@ expandButton.textContent = 'Click!';
 
 // add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
-
-
-expandButton.addEventListener('click', (event) => {
+expandButton.addEventListener('click', event => {
   console.log('Article button test when we click', event.target);
   //toggling article open//
   article.classList.toggle('article-open');
-
-//or should mainArticle just be: 'article' instead?
 
 });
 
